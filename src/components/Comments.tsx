@@ -40,12 +40,12 @@ export default async function Comments({ postSlug }: { postSlug: string }) {
       </form>
 
       {comments.map(
-        (comment: { id: string; username: string; comment: string }) => {
+        (comment: { id: string; username: string; content: string }) => {
           return (
             <li key={comment.id}>
               {comment.username} says...
               <br />
-              {comment.comment}
+              {comment.content}
             </li>
           );
         }
