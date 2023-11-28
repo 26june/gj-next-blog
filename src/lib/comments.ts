@@ -8,5 +8,11 @@ export async function saveComments(
 ) {
   const uuid = short.generate();
 
-  await sql`INSERT INTO comments (id, slug, username, content) VALUES (${uuid}, ${slug}, ${username}, ${content})`;
+  await sql`INSERT INTO comments (id, slug, username, content) VALUES (${uuid}, ${slug}, ${username}, ${content});`;
+
+  return uuid;
+}
+
+export async function getComments(slug: string) {
+  return await sql`SELECT * from comments WHERE slug=${slug};`;
 }
