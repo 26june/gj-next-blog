@@ -12,9 +12,9 @@ export default async function Comments({ postSlug }: { postSlug: string }) {
         <label htmlFor="username">Name</label>
         <input type="text" name="username" className="text-black" />
 
-        <label htmlFor="comment">Your Comment</label>
+        <label htmlFor="content">Your Comment</label>
         <textarea
-          name="comment"
+          name="content"
           cols={30}
           rows={10}
           className="text-black"
