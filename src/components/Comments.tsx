@@ -9,7 +9,6 @@ export default async function Comments({ postSlug }: { postSlug: string }) {
       { next: { revalidate: 5 } }
     );
     const response = await commentsResult.json();
-    console.log(response);
     comments = response.comments.rows;
   } catch (err) {
     console.log(err);
