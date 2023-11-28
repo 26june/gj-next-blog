@@ -10,10 +10,15 @@ export default async function Comments({ postSlug }: { postSlug: string }) {
         className="flex flex-col w-[25vw]"
       >
         <label htmlFor="username">Name</label>
-        <input type="text" name="username" />
+        <input type="text" name="username" className="text-black" />
 
         <label htmlFor="comment">Your Comment</label>
-        <textarea name="comment" cols={30} rows={10}></textarea>
+        <textarea
+          name="comment"
+          cols={30}
+          rows={10}
+          className="text-black"
+        ></textarea>
 
         <input type="submit" value={"Send Comment"} />
       </form>
