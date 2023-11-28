@@ -4,7 +4,11 @@ export default async function Comments({ postSlug }: { postSlug: string }) {
       <h2>Comments</h2>
       <h3>Leave a comment below...</h3>
 
-      <form action={`/api/comments/${postSlug}`} method="POST">
+      <form
+        action={`/api/comments/${postSlug}`}
+        method="POST"
+        className="flex flex-col w-[25vw]"
+      >
         <label htmlFor="username">Name</label>
         <input type="text" name="username" />
 
