@@ -22,7 +22,6 @@ export function CommentForm({ postSlug }: { postSlug: string }) {
     // prevent the form submitting and redircting us to the action location
     event.preventDefault();
 
-    // get the form input values
     // @ts-ignore
     const username = event.target["username"].value;
     // @ts-ignore
